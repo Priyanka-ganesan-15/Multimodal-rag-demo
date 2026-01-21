@@ -8,6 +8,12 @@ class Settings(BaseSettings):
     LOG_LEVEL: str = "INFO"
 
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
+    DATABASE_URL: str
+    SUPABASE_URL: str
+    SUPABASE_SERVICE_ROLE_KEY: str
+    SUPABASE_BUCKET: str = "uploads"
+
+
 
 
 settings = Settings()
